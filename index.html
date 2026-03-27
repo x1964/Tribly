@@ -29,10 +29,16 @@
 }
 </script>
 
-<script>window.location.replace("https://triblyapp.infinityfreeapp.com/")</script>
 </head>
 <body>
 <h1>Tribly - Growing Together</h1>
 <p>منصة التواصل الاجتماعي التي تجمعك بأصحابك بطريقة مختلفة</p>
+
+<script>
+  // Google bot مش بيشغل JS فيشوف المحتوى، المستخدم العادي بيتحول فوراً
+  if (navigator.userAgent.indexOf('Googlebot') === -1) {
+    window.location.replace("https://triblyapp.infinityfreeapp.com/");
+  }
+</script>
 </body>
 </html>
