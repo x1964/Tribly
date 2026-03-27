@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,20 +10,24 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://tribly.online/">
 
-<!-- Open Graph -->
+<!-- Open Graph / Twitter Tags -->
 <meta property="og:title" content="Tribly — Find Your Tribe">
 <meta property="og:description" content="Join communities and connect with people.">
 <meta property="og:image" content="https://tribly.online/img/maskable_icon.png">
 <meta property="og:url" content="https://tribly.online/">
-
-<!-- سرعة -->
-<link rel="preconnect" href="https://triblyapp.infinityfreeapp.com">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tribly — Find Your Tribe">
+<meta name="twitter:description" content="Join communities and connect with people.">
+<meta name="twitter:image" content="https://tribly.online/img/maskable_icon.png">
 
 <style>
 html, body {
     margin: 0;
+    padding: 0;
     height: 100%;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
 }
 
 /* iframe */
@@ -34,31 +37,56 @@ iframe {
     width: 100%;
     height: 100%;
     border: none;
+    z-index: 1;
 }
 
-/* محتوى ظاهر بسيط */
+/* محتوى SEO ظاهر */
 .seo {
-    padding: 20px;
-    max-width: 700px;
-    margin: auto;
+    position: relative;
+    z-index: 3;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     text-align: center;
 }
-</style>
 
+/* شعار / لوجو */
+.logo-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5; /* أعلى من iframe والـ SEO */
+}
+
+.logo-container img {
+    width: 120px;
+    height: auto;
+}
+</style>
 </head>
 
 <body>
 
-<!-- محتوى حقيقي (مهم جداً) -->
+<!-- شعار ظاهر فوق كل حاجة -->
+<div class="logo-container">
+    <img src="https://tribly.online/img/maskable_icon.png" alt="Tribly Logo">
+</div>
+
+<!-- محتوى SEO -->
 <div class="seo">
     <h1>Tribly — Find Your Tribe</h1>
     <p>
         Tribly helps you discover communities, attend events, and connect with people worldwide.
+        Join now and find your community today!
     </p>
 </div>
 
-<!-- الموقع -->
-<iframe src="https://triblyapp.infinityfreeapp.com/?i=1"></iframe>
+<!-- الموقع داخل iframe -->
+<iframe src="https://triblyapp.infinityfreeapp.com/?i=1" title="Tribly App"></iframe>
 
 </body>
 </html>
