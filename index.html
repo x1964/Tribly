@@ -10,6 +10,8 @@
 <link rel="canonical" href="https://tribly.online/">
 <link rel="icon" type="image/png" href="img/maskable_icon.png">
 <link rel="apple-touch-icon" href="img/maskable_icon.png">
+<link rel="preconnect" href="https://triblyapp.infinityfreeapp.com">
+<link rel="dns-prefetch" href="https://triblyapp.infinityfreeapp.com">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -29,16 +31,16 @@
 }
 </script>
 
-</head>
-<body>
-<h1>Tribly - Growing Together</h1>
-<p>منصة التواصل الاجتماعي التي تجمعك بأصحابك بطريقة مختلفة</p>
-
 <script>
-  // Google bot مش بيشغل JS فيشوف المحتوى، المستخدم العادي بيتحول فوراً
-  if (navigator.userAgent.indexOf('Googlebot') === -1) {
+  var b = navigator.userAgent;
+  if (b.indexOf('Googlebot') === -1 && b.indexOf('bingbot') === -1 && b.indexOf('Baiduspider') === -1) {
     window.location.replace("https://triblyapp.infinityfreeapp.com/");
   }
 </script>
+
+</head>
+<body style="margin:0;padding:0;background:#00B248;">
+<h1 style="display:none;">Tribly - Growing Together</h1>
+<p style="display:none;">منصة التواصل الاجتماعي التي تجمعك بأصحابك بطريقة مختلفة</p>
 </body>
 </html>
