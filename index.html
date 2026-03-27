@@ -2,94 +2,63 @@
 <html lang="en">
 <head>
 
-<!-- ═══ أساسيات ═══ -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ═══ Title (مهم جداً) ═══ -->
-<title>Tribly — Find Communities, Events & Friends Online</title>
+<title>Tribly — Find Communities, Events & Friends</title>
 
-<!-- ═══ SEO ═══ -->
-<meta name="description" content="Tribly is a modern platform to discover communities, join events, and meet new people around the world. Start building real connections now.">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="description" content="Discover communities, attend events, and meet people worldwide with Tribly.">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://tribly.online/">
 
-<!-- ═══ Open Graph ═══ -->
-<meta property="og:type" content="website">
+<!-- Open Graph -->
 <meta property="og:title" content="Tribly — Find Your Tribe">
-<meta property="og:description" content="Join communities, attend events, and connect with people worldwide.">
+<meta property="og:description" content="Join communities and connect with people.">
 <meta property="og:image" content="https://tribly.online/img/maskable_icon.png">
 <meta property="og:url" content="https://tribly.online/">
 
-<!-- ═══ Twitter ═══ -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tribly — Find Your Tribe">
-<meta name="twitter:description" content="Discover communities and connect with people.">
-<meta name="twitter:image" content="https://tribly.online/img/maskable_icon.png">
-
-<!-- ═══ سرعة (مهم جداً) ═══ -->
-<link rel="dns-prefetch" href="//triblyapp.infinityfreeapp.com">
+<!-- سرعة -->
 <link rel="preconnect" href="https://triblyapp.infinityfreeapp.com">
 
-<!-- ═══ Preload ═══ -->
-<link rel="preload" as="document" href="https://triblyapp.infinityfreeapp.com/?i=1">
-
-<!-- ═══ Redirect فائق السرعة ⚡ ═══ -->
-<script>
-(function() {
-    const target = "https://triblyapp.infinityfreeapp.com/?i=1";
-
-    // أسرع تنفيذ ممكن
-    if (document.visibilityState === "visible") {
-        window.location.replace(target);
-    } else {
-        requestAnimationFrame(() => window.location.replace(target));
-    }
-})();
-</script>
-
-<!-- fallback -->
-<meta http-equiv="refresh" content="0.3;url=https://triblyapp.infinityfreeapp.com/?i=1">
-
-<!-- ═══ Structured Data ═══ -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "name": "Tribly",
- "url": "https://tribly.online/",
- "logo": "https://tribly.online/img/maskable_icon.png"
+<style>
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: sans-serif;
 }
-</script>
 
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebSite",
- "name": "Tribly",
- "url": "https://tribly.online/"
+/* iframe */
+iframe {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
-</script>
+
+/* محتوى ظاهر بسيط */
+.seo {
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+</style>
 
 </head>
 
 <body>
 
-<!-- محتوى خفيف للـ SEO -->
-<h1>Tribly — Find Your Tribe</h1>
+<!-- محتوى حقيقي (مهم جداً) -->
+<div class="seo">
+    <h1>Tribly — Find Your Tribe</h1>
+    <p>
+        Tribly helps you discover communities, attend events, and connect with people worldwide.
+    </p>
+</div>
 
-<p>
-Tribly helps you discover communities, attend events, and connect with people worldwide.
-Join now and build real friendships بسهولة.
-</p>
-
-<h2>Communities • Events • Friends</h2>
-
-<p>
-Explore communities, meet new people, and join events near you.
-</p>
-
-<a href="https://triblyapp.infinityfreeapp.com/?i=1">Open Tribly</a>
+<!-- الموقع -->
+<iframe src="https://triblyapp.infinityfreeapp.com/?i=1"></iframe>
 
 </body>
 </html>
