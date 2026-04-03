@@ -1,23 +1,1226 @@
 <!DOCTYPE html>
-<html lang="ar">
-
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tribly</title>
+    <!-- Charset & Viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- اللوجو يظهر في التاب -->
-  <link rel="icon" href="img/maskable_icon.png" type="image/png">
+    <!-- Primary Meta Tags -->
+    <title>Tribly — Temporarily Suspended</title>
+    <meta name="title" content="Tribly — Temporarily Suspended">
+    <meta name="description" content="The Tribly project has been temporarily suspended. Thank you for being part of the journey. We hope to return with a stronger vision.">
+    <meta name="keywords" content="tribly, social platform, community, suspended, project pause">
+    <meta name="author" content="Tribly Team">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://tribly.online/">
+    <link rel="shortcut icon" href="img/maskable_icon.png" type="image/x-icon">
 
-  <!-- Redirect فوري جداً -->
-  <script>
-    window.location.replace("https://triblly.infinityfreeapp.com");
-  </script>
+     <!-- رابط Font Awesome لو مش موجود -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="EG">
+    <meta name="geo.placename" content="Alexandria">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tribly.app/">
+    <meta property="og:title" content="Tribly — Temporarily Suspended">
+    <meta property="og:description" content="The Tribly project has been temporarily suspended. Thank you for being part of the journey.">
+    <meta property="og:image" content="https://tribly.online/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Tribly Project Suspended">
+    <meta property="og:site_name" content="Tribly">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tribly.online/">
+    <meta property="twitter:title" content="Tribly — Temporarily Suspended">
+    <meta property="twitter:description" content="The Tribly project has been temporarily suspended. Thank you for being part of the journey.">
+    <meta property="twitter:image" content="https://tribly.online/img/og-image.png">
+    <meta name="twitter:creator" content="@tribly">
+
+    <!-- PWA & Mobile -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="application-name" content="Tribly">
+    <meta name="apple-mobile-web-app-title" content="Tribly">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#00B248">
+    <meta name="msapplication-TileImage" content="img/mstile-144x144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+
+    <!-- Favicon - All Sizes & Formats -->
+    <!-- ICO format (legacy browsers) - contains 16x16, 32x32, 48x48 -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- PNG favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/apple-touch-icon-1024x1024.png">
+
+    <!-- Android/Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="36x36" href="img/android-icon-36x36.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="img/android-icon-48x48.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="img/android-icon-72x72.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/android-icon-96x96.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="img/android-icon-144x144.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/android-icon-512x512.png">
+
+    <!-- Maskable Icons (Adaptive Icons) -->
+    <link rel="icon" type="image/png" sizes="192x192" href="img/maskable_icon_x192.png" purpose="maskable">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/maskable_icon_x512.png" purpose="maskable">
+
+    <!-- Safari Pinned Tab (SVG) -->
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#00B248">
+
+    <!-- Shortcut Icon -->
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- Preconnect & DNS Prefetch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" as="style">
+    <link rel="preload" href="img/maskable_icon.png" as="image" type="image/png">
+    <link rel="preload" href="img/apple-touch-icon-180x180.png" as="image" type="image/png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0QCpw9hk7Kr+Jw2v8tD2K0e4yW2j47dN2D9n/" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Tribly",
+        "url": "https://tribly.app",
+        "logo": "https://tribly.app/img/maskable_icon.png",
+        "description": "The next-generation social platform connecting communities through shared interests.",
+        "email": "triblyteam@gmail.com",
+        "sameAs": [
+            "https://twitter.com/tribly",
+            "https://instagram.com/tribly",
+            "https://linkedin.com/company/tribly"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Alexandria",
+            "addressCountry": "EG"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --brand-primary: #00B248;
+            --brand-secondary: #C6F135;
+            --brand-accent: #00d4aa;
+            --brand-glow: rgba(0, 178, 72, 0.5);
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-tertiary: #1a1a1a;
+            --bg-elevated: #222222;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --text-tertiary: #71717a;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-strong: rgba(255, 255, 255, 0.15);
+            --gradient-brand: linear-gradient(135deg, #00B248 0%, #C6F135 100%);
+            --gradient-hero: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 178, 72, 0.15), transparent);
+            --gradient-glow: radial-gradient(circle at 50% 50%, rgba(0, 178, 72, 0.2), transparent 70%);
+            --space-xs: clamp(0.25rem, 0.5vw, 0.5rem);
+            --space-sm: clamp(0.5rem, 1vw, 1rem);
+            --space-md: clamp(0.75rem, 1.5vw, 1.5rem);
+            --space-lg: clamp(1rem, 2vw, 2rem);
+            --space-xl: clamp(1.5rem, 3vw, 3rem);
+            --space-2xl: clamp(2rem, 4vw, 4rem);
+            --space-3xl: clamp(3rem, 6vw, 6rem);
+            --font-display: 'Plus Jakarta Sans', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-spring: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #fafafa;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f4f4f5;
+            --bg-elevated: #ffffff;
+            --text-primary: #18181b;
+            --text-secondary: #52525b;
+            --text-tertiary: #a1a1aa;
+            --border-subtle: rgba(0, 0, 0, 0.06);
+            --border-strong: rgba(0, 0, 0, 0.12);
+            --gradient-hero: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 178, 72, 0.08), transparent);
+            --gradient-glow: radial-gradient(circle at 50% 50%, rgba(0, 178, 72, 0.1), transparent 70%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: clamp(14px, 2vw, 16px);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.5s var(--ease-out-expo), color 0.5s var(--ease-out-expo);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Cursor Glow Effect */
+        .cursor-glow {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 178, 72, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        @media (pointer: fine) {
+            .cursor-glow {
+                opacity: 1;
+            }
+        }
+
+        /* Floating Particles */
+        .particles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--brand-primary);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float-particle 20s infinite linear;
+        }
+
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 25s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 30s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 22s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 1s; animation-duration: 28s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 3s; animation-duration: 24s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 5s; animation-duration: 32s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 2s; animation-duration: 26s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 4s; animation-duration: 29s; }
+        .particle:nth-child(9) { left: 90%; animation-delay: 1s; animation-duration: 23s; }
+        .particle:nth-child(10) { left: 15%; animation-delay: 6s; animation-duration: 27s; }
+        .particle:nth-child(11) { left: 25%; animation-delay: 3s; animation-duration: 31s; }
+        .particle:nth-child(12) { left: 35%; animation-delay: 5s; animation-duration: 25s; }
+        .particle:nth-child(13) { left: 45%; animation-delay: 2s; animation-duration: 28s; }
+        .particle:nth-child(14) { left: 55%; animation-delay: 4s; animation-duration: 24s; }
+        .particle:nth-child(15) { left: 65%; animation-delay: 1s; animation-duration: 30s; }
+        .particle:nth-child(16) { left: 75%; animation-delay: 6s; animation-duration: 26s; }
+        .particle:nth-child(17) { left: 85%; animation-delay: 3s; animation-duration: 29s; }
+        .particle:nth-child(18) { left: 5%; animation-delay: 5s; animation-duration: 23s; }
+        .particle:nth-child(19) { left: 95%; animation-delay: 2s; animation-duration: 27s; }
+        .particle:nth-child(20) { left: 50%; animation-delay: 7s; animation-duration: 33s; }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.3;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-100vh) scale(1);
+                opacity: 0;
+            }
+        }
+
+        .display-xl {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 10vw, 5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+        }
+
+        .display-lg {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 6vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+        }
+
+        .text-gradient {
+            background: var(--gradient-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Glitch Effect for Pause */
+        .glitch-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+        }
+
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff00ff;
+            clip: rect(24px, 550px, 90px, 0);
+            animation: glitch-anim-2 3s infinite linear alternate-reverse;
+        }
+
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: -2px 0 #00ffff;
+            clip: rect(85px, 550px, 140px, 0);
+            animation: glitch-anim 2.5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(10px, 9999px, 85px, 0); }
+            20% { clip: rect(63px, 9999px, 130px, 0); }
+            40% { clip: rect(25px, 9999px, 15px, 0); }
+            60% { clip: rect(88px, 9999px, 95px, 0); }
+            80% { clip: rect(45px, 9999px, 60px, 0); }
+            100% { clip: rect(15px, 9999px, 110px, 0); }
+        }
+
+        @keyframes glitch-anim-2 {
+            0% { clip: rect(65px, 9999px, 100px, 0); }
+            20% { clip: rect(20px, 9999px, 45px, 0); }
+            40% { clip: rect(90px, 9999px, 120px, 0); }
+            60% { clip: rect(35px, 9999px, 70px, 0); }
+            80% { clip: rect(75px, 9999px, 95px, 0); }
+            100% { clip: rect(10px, 9999px, 60px, 0); }
+        }
+
+        /* Typewriter Effect */
+        .typewriter {
+            overflow: hidden;
+            border-right: 0.15em solid var(--brand-primary);
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+            display: inline-block;
+            max-width: 100%;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--brand-primary); }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 clamp(1rem, 5vw, 2rem);
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: var(--space-sm) 0;
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            background: rgba(10, 10, 10, 0.8);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: all 0.3s var(--ease-out-expo);
+        }
+
+        .nav.scrolled {
+            padding: calc(var(--space-xs) + 0.25rem) 0;
+            background: rgba(10, 10, 10, 0.95);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 clamp(1rem, 5vw, 2rem);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-mark {
+            width: clamp(32px, 8vw, 40px);
+            height: clamp(32px, 8vw, 40px);
+            background: var(--gradient-brand);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s var(--ease-spring);
+        }
+
+        .logo-mark img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo:hover .logo-mark {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .logo-text {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: clamp(1.25rem, 4vw, 1.5rem);
+            letter-spacing: -0.02em;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .theme-toggle {
+            width: clamp(36px, 8vw, 40px);
+            height: clamp(36px, 8vw, 40px);
+            border-radius: 50%;
+            border: 1px solid var(--border-strong);
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+            transition: all 0.3s var(--ease-spring);
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(180deg) scale(1.1);
+            border-color: var(--brand-primary);
+            color: var(--brand-primary);
+        }
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: calc(var(--space-3xl) + 80px) 0 var(--space-2xl);
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(800px, 150vw);
+            height: min(600px, 100vh);
+            background: var(--gradient-glow);
+            filter: blur(80px);
+            opacity: 0.3;
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(var(--border-subtle) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+            background-size: clamp(40px, 5vw, 60px) clamp(40px, 5vw, 60px);
+            mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+            opacity: 0.3;
+            animation: grid-move 20s linear infinite;
+        }
+
+        @keyframes grid-move {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(60px); }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.2; transform: translateX(-50%) scale(1); }
+            50% { opacity: 0.5; transform: translateX(-50%) scale(1.05); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: min(900px, 90vw);
+            margin: 0 auto;
+            padding: 0 var(--space-sm);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-xs) var(--space-md);
+            background: rgba(198, 241, 53, 0.1);
+            border: 1px solid rgba(198, 241, 53, 0.3);
+            border-radius: 9999px;
+            font-size: clamp(0.75rem, 2vw, 0.875rem);
+            color: var(--brand-secondary);
+            margin-bottom: var(--space-md);
+            animation: fade-in-up 0.6s var(--ease-out-expo) 0.2s both;
+            font-weight: 600;
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--brand-secondary);
+            border-radius: 50%;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+
+        .hero-title {
+            margin-bottom: var(--space-md);
+            animation: fade-in-up 0.6s var(--ease-out-expo) 0.3s both;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: var(--text-secondary);
+            max-width: min(600px, 90%);
+            margin: 0 auto var(--space-xl);
+            line-height: 1.6;
+            animation: fade-in-up 0.6s var(--ease-out-expo) 0.4s both;
+        }
+
+        .hero-message {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: clamp(var(--space-lg), 5vw, var(--space-2xl));
+            margin: var(--space-xl) auto;
+            max-width: min(600px, 90vw);
+            animation: fade-in-up 0.6s var(--ease-out-expo) 0.5s both;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+        }
+
+        .hero-message:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 178, 72, 0.1);
+        }
+
+        .hero-message::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-brand);
+            opacity: 0.5;
+            animation: shimmer-bar 3s infinite;
+        }
+
+        @keyframes shimmer-bar {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .hero-message-icon {
+            width: clamp(64px, 15vw, 80px);
+            height: clamp(64px, 15vw, 80px);
+            background: var(--bg-tertiary);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            color: var(--brand-secondary);
+            margin: 0 auto var(--space-md);
+            animation: float 3s ease-in-out infinite, pulse-icon 2s ease-in-out infinite;
+            position: relative;
+        }
+
+        .hero-message-icon::after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border-radius: 25px;
+            background: var(--gradient-brand);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.3s ease;
+            filter: blur(10px);
+        }
+
+        .hero-message:hover .hero-message-icon::after {
+            opacity: 0.3;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse-icon {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero-message h3 {
+            font-family: var(--font-display);
+            font-size: clamp(1.25rem, 4vw, 1.5rem);
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+            color: var(--text-primary);
+        }
+
+        .hero-message p {
+            color: var(--text-secondary);
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--space-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fade-in-up 0.6s var(--ease-out-expo) 0.6s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: clamp(var(--space-md), 5vw, var(--space-xl));
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fade-in-up 0.6s var(--ease-out-expo) 0.7s both;
+            margin-top: var(--space-2xl);
+        }
+
+        .stat {
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+            transition: transform 0.3s var(--ease-out-expo);
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-value {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 5vw, 2rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        .stat:hover .stat-value {
+            color: var(--brand-primary);
+        }
+
+        .stat-label {
+            font-size: clamp(0.75rem, 2vw, 0.875rem);
+            color: var(--text-tertiary);
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-xs);
+            padding: 0.625rem 1.25rem;
+            border-radius: 9999px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: clamp(0.8125rem, 2vw, 0.875rem);
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s var(--ease-out-expo);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--gradient-brand);
+            color: #000;
+            box-shadow: 0 4px 15px rgba(0, 178, 72, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 178, 72, 0.4);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.95);
+        }
+
+        .btn-secondary {
+            background: var(--bg-elevated);
+            color: var(--text-primary);
+            border: 1px solid var(--border-strong);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-tertiary);
+            border-color: var(--brand-primary);
+            transform: translateY(-2px);
+        }
+
+        .btn-lg {
+            padding: 0.875rem 1.5rem;
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+        }
+
+        /* Confetti Canvas */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-subtle);
+            padding: var(--space-xl) 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+            text-align: center;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .footer-brand:hover {
+            transform: scale(1.05);
+        }
+
+        .footer-text {
+            color: var(--text-tertiary);
+            font-size: clamp(0.75rem, 2vw, 0.875rem);
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--space-sm);
+        }
+
+        .social-links a {
+            width: clamp(36px, 8vw, 40px);
+            height: clamp(36px, 8vw, 40px);
+            border-radius: 50%;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+            transition: all 0.3s var(--ease-out-expo);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-links a::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-brand);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-links a:hover::before {
+            opacity: 1;
+        }
+
+        .social-links a:hover {
+            color: white;
+            transform: translateY(-4px);
+        }
+
+        .social-links a i {
+            position: relative;
+            z-index: 1;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--bg-tertiary);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--brand-primary);
+        }
+
+        ::selection {
+            background: var(--brand-primary);
+            color: white;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html {
+                scroll-behavior: auto;
+            }
+            .cursor-glow,
+            .particles-container {
+                display: none;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .hero-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+<base target="_blank">
 </head>
-
 <body>
-  <!-- لو المتصفح منع الجافاسكربت -->
-  <meta http-equiv="refresh" content="0; url=https://triblly.infinityfreeapp.com">
-</body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
 
+    <!-- Floating Particles -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <div class="logo-mark">
+                    <img src="img/maskable_icon.png" alt="Tribly" width="40" height="40" loading="eager" fetchpriority="high">
+                </div>
+                <span class="logo-text">tribly</span>
+            </a>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun" id="themeIcon" style="font-size:24px; cursor:pointer;"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-glow"></div>
+            <div class="hero-grid"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    <span>Temporarily Suspended</span>
+                </div>
+
+                <h1 class="hero-title display-xl">
+                    Tribly is on<br>
+                    <span class="text-gradient glitch-text" data-text="Pause">Pause</span>
+                </h1>
+
+                <p class="hero-subtitle typewriter">
+                    The Tribly project has been temporarily suspended. We thank everyone who joined us on this journey, and hope to return with a stronger, better vision.
+                </p>
+
+                <div class="hero-message">
+                    <div class="hero-message-icon">
+                        <i class="fas fa-pause-circle"></i>
+                    </div>
+                    <h3>Not now, but maybe...</h3>
+                    <p>
+                        Tribly has been paused while we rethink the concept and work on something better. We appreciate your support and trust, and promise to come back stronger if we decide to continue.
+                    </p>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="mailto:triblyteam@gmail.com" class="btn btn-primary btn-lg" rel="noopener noreferrer" id="contactBtn">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value" data-target="638">0</div>
+                        <div class="stat-label">Past Members</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" data-target="4">0</div>
+                        <div class="stat-label">Cities</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">∞</div>
+                        <div class="stat-label">Memories</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="footer-brand">
+                    <div class="logo-mark" style="width: 32px; height: 32px; font-size: 0.875rem;">
+                        <img src="img/maskable_icon.png" alt="Tribly" width="32" height="32" loading="lazy">
+                    </div>
+                    <span class="logo-text" style="font-size: 1.25rem;">tribly</span>
+                </a>
+                <p class="footer-text">
+                    &copy; 2026 Tribly. All rights reserved.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Management
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+        const nav = document.getElementById('nav');
+
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme') || (systemPrefersDark ? 'dark' : 'light');
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateThemeIcon(next);
+        });
+
+        function updateThemeIcon(theme) {
+            themeIcon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+        }
+
+        // Navigation Scroll Effect
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        }, { passive: true });
+
+        // Cursor Glow Effect
+        const cursorGlow = document.getElementById('cursorGlow');
+        let mouseX = 0, mouseY = 0;
+        let currentX = 0, currentY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateCursor() {
+            currentX += (mouseX - currentX) * 0.1;
+            currentY += (mouseY - currentY) * 0.1;
+            cursorGlow.style.left = currentX + 'px';
+            cursorGlow.style.top = currentY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Count Up Animation for Stats
+        const stats = document.querySelectorAll('.stat-value[data-target]');
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    animateCount(entry.target, target);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        stats.forEach(stat => statsObserver.observe(stat));
+
+        function animateCount(element, target) {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 30);
+        }
+
+        // Confetti Effect
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let confetti = [];
+        const colors = ['#00B248', '#C6F135', '#00d4aa', '#ffffff'];
+
+        function createConfetti() {
+            return {
+                x: Math.random() * canvas.width,
+                y: -10,
+                size: Math.random() * 8 + 4,
+                color: colors[Math.floor(Math.random() * colors.length)],
+                speedY: Math.random() * 3 + 2,
+                speedX: Math.random() * 2 - 1,
+                rotation: Math.random() * 360,
+                rotationSpeed: Math.random() * 4 - 2
+            };
+        }
+
+        function updateConfetti() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            confetti.forEach((particle, index) => {
+                particle.y += particle.speedY;
+                particle.x += particle.speedX;
+                particle.rotation += particle.rotationSpeed;
+
+                ctx.save();
+                ctx.translate(particle.x, particle.y);
+                ctx.rotate(particle.rotation * Math.PI / 180);
+                ctx.fillStyle = particle.color;
+                ctx.fillRect(-particle.size / 2, -particle.size / 2, particle.size, particle.size);
+                ctx.restore();
+
+                if (particle.y > canvas.height) {
+                    confetti.splice(index, 1);
+                }
+            });
+
+            if (confetti.length > 0) {
+                requestAnimationFrame(updateConfetti);
+            }
+        }
+
+        function triggerConfetti() {
+            for (let i = 0; i < 100; i++) {
+                confetti.push(createConfetti());
+            }
+            updateConfetti();
+        }
+
+        // Trigger confetti on contact button click
+        document.getElementById('contactBtn').addEventListener('click', (e) => {
+            triggerConfetti();
+        });
+
+        // Resize canvas on window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Performance: Remove animation classes after animation completes
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.hero-badge, .hero-title, .hero-subtitle, .hero-message, .hero-actions, .hero-stats');
+
+            animatedElements.forEach(el => {
+                el.addEventListener('animationend', () => {
+                    el.style.willChange = 'auto';
+                }, { once: true });
+            });
+        });
+
+        // Parallax effect for hero grid
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const grid = document.querySelector('.hero-grid');
+            if (grid) {
+                grid.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        }, { passive: true });
+    </script>
+</body>
 </html>
