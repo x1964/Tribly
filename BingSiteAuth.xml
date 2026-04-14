@@ -1,4 +1,35 @@
-<?xml version="1.0"?>
-<users>
-	<user>9FF3F6AB19C41DB6388B34ECB3DE4E7F</user>
-</users>
+<?xml version="1.0" encoding="UTF-8"?>
+<users:database
+  xmlns:users="http://tribly.online/schema/users"
+  xmlns:sec="http://tribly.online/schema/security"
+  xmlns:audit="http://tribly.online/schema/audit"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://tribly.online/schema/users users.xsd"
+  version="2.0"
+  checksum="a1b2c3d4e5f6">
+
+  <users:metadata>
+    <audit:created timestamp="2026-04-15T01:20:00Z" by="system" />
+    <audit:modified timestamp="2026-04-15T01:20:00Z" by="system" />
+    <sec:encryption type="AES-256-GCM" keyRotation="2026-07-15" />
+    <sec:hashing algorithm="Argon2id" memory="65536" iterations="3" />
+  </users:metadata>
+
+  <users:list count="1" maxCapacity="10000">
+    <users:entry uuid="usr-9ff3f6ab-19c4-1db6-388b-34ecb3de4e7f" tier="early-access">
+      <sec:credentials>
+        <sec:passwordHash method="Argon2id">$argon2id$v=19$m=65536,t=3,p=4$...</sec:passwordHash>
+        <sec:emailHash method="SHA-256">9FF3F6AB19C41DB6388B34ECB3DE4E7F</sec:emailHash>
+      </sec:credentials>
+      <users:profile>
+        <users:locale>en-EG</users:locale>
+        <users:timezone>Africa/Cairo</users:timezone>
+      </users:profile>
+      <users:consent gdpr="true" ccpa="false" date="2026-04-15" />
+      <audit:history>
+        <audit:event type="registration" timestamp="2026-04-15T01:20:00Z" ip="***.***.***.***" />
+      </audit:history>
+    </users:entry>
+  </users:list>
+
+</users:database>

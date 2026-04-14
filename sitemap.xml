@@ -1,40 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- الصفحة الرئيسية -->
+  <!-- الصفحة الرئيسية - Coming Soon -->
   <url>
     <loc>https://tribly.online/</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-15T01:19:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+
+    <!-- نسخة AMP للموبايل -->
+    <xhtml:link rel="amphtml" href="https://tribly.online/amp/" />
+
+    <!-- Alternate Languages -->
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tribly.online/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tribly.online/" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://tribly.online/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://tribly.online/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tribly.online/ar/" />
+    <xhtml:link rel="alternate" hreflang="ar-EG" href="https://tribly.online/ar/" />
+
+    <!-- Mobile -->
     <mobile:mobile />
+
+    <!-- Images -->
+    <image:image>
+      <image:loc>https://tribly.online/img/og-image.png</image:loc>
+      <image:title>Tribly - Coming Back Soon | Social Platform</image:title>
+      <image:caption>Tribly is returning stronger than ever. Stay tuned for the comeback of your
+        favorite community platform.</image:caption>
+      <image:geo_location>Alexandria, Egypt</image:geo_location>
+      <image:license>https://tribly.online/license</image:license>
+    </image:image>
+
     <image:image>
       <image:loc>https://tribly.online/img/maskable_icon.png</image:loc>
-      <image:title>Tribly - Growing Together</image:title>
-      <image:caption>منصة التواصل الاجتماعي التي تجمعك بأصحابك بطريقة مختلفة</image:caption>
+      <image:title>Tribly Logo - Maskable Icon</image:title>
+      <image:caption>Tribly brand identity - Growing Together</image:caption>
+      <image:license>https://tribly.online/license</image:license>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://tribly.online/img/apple-touch-icon-180x180.png</image:loc>
+      <image:title>Tribly Apple Touch Icon</image:title>
+      <image:caption>Tribly iOS Home Screen Icon</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://tribly.online/img/favicon-32x32.png</image:loc>
+      <image:title>Tribly Favicon</image:title>
+    </image:image>
+
+    <!-- Video (لو عندك teaser video) -->
+    <!--
+    <video:video>
+      <video:thumbnail_loc>https://tribly.online/img/video-thumbnail.jpg</video:thumbnail_loc>
+      <video:title>Tribly is Coming Back - Official Teaser</video:title>
+      <video:description>Watch the official teaser for the return of Tribly social
+    platform</video:description>
+      <video:content_loc>https://tribly.online/video/teaser.mp4</video:content_loc>
+      <video:player_loc>https://tribly.online/player</video:player_loc>
+      <video:duration>60</video:duration>
+      <video:expiration_date>2026-12-31</video:expiration_date>
+      <video:rating>4.5</video:rating>
+      <video:view_count>1000</video:view_count>
+      <video:publication_date>2026-04-15</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:restriction relationship="allow">EG US GB CA AU</video:restriction>
+      <video:price currency="EGP">0.00</video:price>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:uploader info="https://tribly.online/about">Tribly Team</video:uploader>
+      <video:live>no</video:live>
+    </video:video>
+    -->
+
+  </url>
+
+  <!-- النسخة العربية -->
+  <url>
+    <loc>https://tribly.online/ar/</loc>
+    <lastmod>2026-04-15T01:19:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tribly.online/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tribly.online/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://tribly.online/ar/" />
+    <xhtml:link rel="alternate" hreflang="ar-EG" href="https://tribly.online/ar/" />
+
+    <mobile:mobile />
+
+    <image:image>
+      <image:loc>https://tribly.online/img/og-image.png</image:loc>
+      <image:title>تريبلي - قريباً | منصة التواصل الاجتماعي</image:title>
+      <image:caption>تريبلي تعود أقوى من أي وقت مضى. ترقبوا عودة منصتكم المفضلة.</image:caption>
+      <image:geo_location>الإسكندرية، مصر</image:geo_location>
     </image:image>
   </url>
 
-  <!-- مثال على صفحة ثانية -->
+  <!-- Robots.txt -->
   <url>
-    <loc>https://tribly.online/about</loc>
-    <lastmod>2026-03-28</lastmod>
+    <loc>https://tribly.online/robots.txt</loc>
+    <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile />
+    <priority>0.1</priority>
   </url>
 
-  <!-- مثال على صفحة تواصل -->
+  <!-- Manifest -->
   <url>
-    <loc>https://tribly.online/contact</loc>
-    <lastmod>2026-03-28</lastmod>
+    <loc>https://tribly.online/manifest.json</loc>
+    <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <mobile:mobile />
+    <priority>0.3</priority>
   </url>
 
 </urlset>
