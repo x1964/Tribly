@@ -13,7 +13,6 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://tribly.online/">
     <link rel="shortcut icon" href="img/maskable_icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <meta name="geo.region" content="EG">
     <meta name="geo.placename" content="Alexandria">
@@ -125,7 +124,6 @@
             flex-direction: column;
         }
 
-        /* ====== CURSOR GLOW ====== */
         .cursor-glow {
             position: fixed;
             width: 300px;
@@ -140,7 +138,6 @@
         }
         @media (pointer: fine) { .cursor-glow { opacity: 1; } }
 
-        /* ====== PARTICLES ====== */
         .particles-container {
             position: fixed;
             top: 0; left: 0;
@@ -185,7 +182,6 @@
             100% { transform:translateY(-100vh) scale(1); opacity:0; }
         }
 
-        /* ====== TYPOGRAPHY ====== */
         .display-xl {
             font-family: var(--font-display);
             font-size: clamp(2rem, 10vw, 5rem);
@@ -201,7 +197,6 @@
             background-clip: text;
         }
 
-        /* ====== ROCKET BOUNCE ANIMATION ====== */
         @keyframes rocket-launch {
             0%   { transform: translateY(0) rotate(-45deg) scale(1); }
             30%  { transform: translateY(-18px) rotate(-45deg) scale(1.1); }
@@ -209,7 +204,6 @@
             100% { transform: translateY(0) rotate(-45deg) scale(1); }
         }
 
-        /* ====== COUNTDOWN TIMER ====== */
         .countdown-section {
             display: flex;
             gap: clamp(0.75rem, 3vw, 1.5rem);
@@ -288,7 +282,6 @@
             50%       { opacity: 0.1; }
         }
 
-        /* ====== PROGRESS BAR ====== */
         .progress-wrap {
             margin: 0 auto var(--space-lg, 1.5rem);
             max-width: min(480px, 90vw);
@@ -335,7 +328,6 @@
             to { left: 200%; }
         }
 
-        /* ====== NOTIFY FORM ====== */
         .notify-form {
             display: flex;
             gap: 0.5rem;
@@ -377,7 +369,34 @@
             animation: fade-in-up 0.4s var(--ease-out-expo) both;
         }
 
-        /* ====== LAYOUT ====== */
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 1rem;
+            background: rgba(0, 178, 72, 0.12);
+            border: 1px solid rgba(0, 178, 72, 0.35);
+            border-radius: 9999px;
+            font-size: clamp(0.75rem, 2vw, 0.875rem);
+            color: var(--brand-primary);
+            margin-bottom: 1.25rem;
+            animation: fade-in-up 0.6s var(--ease-out-expo) 0.2s both;
+            font-weight: 600;
+        }
+
+        .hero-badge-dot {
+            width: 8px; height: 8px;
+            background: var(--brand-primary);
+            border-radius: 50%;
+            animation: pulse-dot 1.5s ease-in-out infinite;
+            box-shadow: 0 0 6px var(--brand-primary);
+        }
+
+        @keyframes pulse-dot {
+            0%,100% { opacity:1; transform:scale(1); box-shadow:0 0 6px var(--brand-primary); }
+            50%      { opacity:0.6; transform:scale(0.75); box-shadow:0 0 12px var(--brand-primary); }
+        }
+
         .container {
             width: 100%;
             max-width: 1280px;
@@ -397,9 +416,17 @@
             transition: all 0.3s var(--ease-out-expo);
         }
 
+        [data-theme="light"] .nav {
+            background: rgba(250, 250, 250, 0.8);
+        }
+
         .nav.scrolled {
             padding: 0.5rem 0;
             background: rgba(10, 10, 10, 0.95);
+        }
+
+        [data-theme="light"] .nav.scrolled {
+            background: rgba(250, 250, 250, 0.95);
         }
 
         .nav-inner {
@@ -520,35 +547,6 @@
             padding: 0 1rem;
         }
 
-        /* Live badge */
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.35rem 1rem;
-            background: rgba(0, 178, 72, 0.12);
-            border: 1px solid rgba(0, 178, 72, 0.35);
-            border-radius: 9999px;
-            font-size: clamp(0.75rem, 2vw, 0.875rem);
-            color: var(--brand-primary);
-            margin-bottom: 1.25rem;
-            animation: fade-in-up 0.6s var(--ease-out-expo) 0.2s both;
-            font-weight: 600;
-        }
-
-        .hero-badge-dot {
-            width: 8px; height: 8px;
-            background: var(--brand-primary);
-            border-radius: 50%;
-            animation: pulse-dot 1.5s ease-in-out infinite;
-            box-shadow: 0 0 6px var(--brand-primary);
-        }
-
-        @keyframes pulse-dot {
-            0%,100% { opacity:1; transform:scale(1); box-shadow:0 0 6px var(--brand-primary); }
-            50%      { opacity:0.6; transform:scale(0.75); box-shadow:0 0 12px var(--brand-primary); }
-        }
-
         .hero-title {
             margin-bottom: 1.25rem;
             animation: fade-in-up 0.6s var(--ease-out-expo) 0.3s both;
@@ -563,7 +561,6 @@
             animation: fade-in-up 0.6s var(--ease-out-expo) 0.4s both;
         }
 
-        /* MESSAGE CARD */
         .hero-message {
             background: var(--bg-elevated);
             border: 1px solid var(--border-subtle);
@@ -623,7 +620,6 @@
             line-height: 1.7;
         }
 
-        /* FEATURES ROW */
         .features-row {
             display: flex;
             gap: clamp(0.75rem, 2vw, 1.25rem);
@@ -656,7 +652,6 @@
 
         .feature-pill i { color: var(--brand-primary); font-size: 0.8rem; }
 
-        /* STATS */
         .hero-stats {
             display: flex;
             gap: clamp(1rem, 5vw, 2.5rem);
@@ -680,7 +675,6 @@
         .stat:hover .stat-value { color: var(--brand-primary); }
         .stat-label { font-size: clamp(0.7rem, 2vw, 0.8rem); color: var(--text-tertiary); }
 
-        /* BUTTONS */
         .hero-actions {
             display: flex;
             gap: 0.75rem;
@@ -731,7 +725,6 @@
             to   { opacity: 1; transform: translateY(0); }
         }
 
-        /* CONFETTI */
         #confetti-canvas {
             position: fixed;
             top: 0; left: 0;
@@ -740,7 +733,6 @@
             z-index: 9998;
         }
 
-        /* FOOTER */
         .footer {
             background: var(--bg-secondary);
             border-top: 1px solid var(--border-subtle);
@@ -799,7 +791,6 @@
         .social-links a:hover { color: white; transform: translateY(-4px); }
         .social-links a i { position: relative; z-index: 1; }
 
-        /* SCROLLBAR */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: var(--bg-primary); }
         ::-webkit-scrollbar-thumb { background: var(--bg-tertiary); border-radius: 3px; }
@@ -819,7 +810,6 @@
             .notify-input { width: 100%; }
         }
     </style>
-    <base target="_blank">
 </head>
 <body>
     <div class="cursor-glow" id="cursorGlow"></div>
@@ -841,7 +831,7 @@
 
     <nav class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#" class="logo">
+            <a href="https://tribly.online" class="logo">
                 <div class="logo-mark">
                     <img src="img/maskable_icon.png" alt="Tribly" width="40" height="40" loading="eager">
                 </div>
@@ -864,25 +854,21 @@
         <div class="container">
             <div class="hero-content">
 
-                <!-- Badge -->
                 <div class="hero-badge">
                     <span class="hero-badge-dot"></span>
                     <span>We're Coming Back — Very Soon</span>
                 </div>
 
-                <!-- Title -->
                 <h1 class="hero-title display-xl">
                     Tribly is<br>
                     <span class="text-gradient">Returning 🚀</span>
                 </h1>
 
-                <!-- Subtitle -->
                 <p class="hero-subtitle">
                     We took a step back to build something much better.
                     Tribly is coming back stronger, smarter, and ready to connect you with your tribe again.
                 </p>
 
-                <!-- Message Card -->
                 <div class="hero-message">
                     <div class="hero-message-icon">
                         <span class="rocket-icon">🚀</span>
@@ -894,7 +880,6 @@
                     </p>
                 </div>
 
-                <!-- Countdown -->
                 <div class="countdown-section" id="countdown">
                     <div class="countdown-block">
                         <span class="countdown-number" id="cd-days">00</span>
@@ -917,7 +902,6 @@
                     </div>
                 </div>
 
-                <!-- Progress Bar -->
                 <div class="progress-wrap">
                     <div class="progress-label">
                         <span>Development Progress</span>
@@ -928,10 +912,9 @@
                     </div>
                 </div>
 
-                <!-- Notify Form -->
                 <div class="notify-form" id="notifyForm">
                     <input type="email" class="notify-input" id="notifyEmail" placeholder="Enter your email to get notified" autocomplete="email">
-                    <button class="btn btn-primary" id="notifyBtn" onclick="handleNotify()">
+                    <button class="btn btn-primary" id="notifyBtn">
                         <i class="fas fa-bell"></i>
                         <span>Notify Me</span>
                     </button>
@@ -941,7 +924,6 @@
                     <span>You're on the list! We'll notify you the moment we're live. 🎉</span>
                 </div>
 
-                <!-- CTAs -->
                 <div class="hero-actions">
                     <a href="mailto:triblyteam@gmail.com" class="btn btn-secondary btn-lg" rel="noopener noreferrer" id="contactBtn">
                         <i class="fas fa-envelope"></i>
@@ -949,7 +931,6 @@
                     </a>
                 </div>
 
-                <!-- What's coming pills -->
                 <div class="features-row">
                     <div class="feature-pill"><i class="fas fa-bolt"></i> Faster & Smoother</div>
                     <div class="feature-pill"><i class="fas fa-users"></i> Better Communities</div>
@@ -957,7 +938,6 @@
                     <div class="feature-pill"><i class="fas fa-star"></i> New Features</div>
                 </div>
 
-                <!-- Stats -->
                 <div class="hero-stats">
                     <div class="stat">
                         <div class="stat-value" id="stat-members" data-target="638">0</div>
@@ -980,7 +960,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <a href="#" class="footer-brand">
+                <a href="https://tribly.online" class="footer-brand">
                     <div class="logo-mark" style="width:32px;height:32px;font-size:0.875rem;">
                         <img src="img/maskable_icon.png" alt="Tribly" width="32" height="32" loading="lazy">
                     </div>
@@ -996,244 +976,219 @@
         </div>
     </footer>
 
-    <script>
-        // ===== STATE MANAGEMENT =====
-        // Load saved state or initialize
-        function loadState() {
-            const saved = localStorage.getItem('triblyState');
-            if (saved) {
-                return JSON.parse(saved);
-            }
-            // Initial state - set target date to 30 days from now
-            return {
-                targetDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(),
-                progress: 78,
-                notified: false,
-                statsAnimated: false,
-                membersCount: 638,
-                citiesCount: 4
-            };
+<script>
+    /*
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  التاريخ محسوب تلقائيًا: أول ما يتم رفع الملف،          ║
+    ║  التاريخ بيتخزن في localStorage ومش بيتغير              ║
+    ║  مهما فتحت من أي متصفح أو مسحت الكوكيز                  ║
+    ║  (مالم تمسح localStorage نفسه)                           ║
+    ╚══════════════════════════════════════════════════════════════╝
+    */
+    const STORAGE_KEY = 'tribly_launch_ts';
+    let LAUNCH_DATE;
+
+    // لو مفيش تاريخ محفوظ → خزّن دلوقتي + 30 يوم (ده بيحصل مرة واحدة بس)
+    if (!localStorage.getItem(STORAGE_KEY)) {
+        const thirtyDays = 30 * 24 * 60 * 60 * 1000;
+        localStorage.setItem(STORAGE_KEY, String(Date.now() + thirtyDays));
+    }
+
+    LAUNCH_DATE = new Date(Number(localStorage.getItem(STORAGE_KEY)));
+
+    const PROGRESS_PERCENT = 78;
+
+    // ===== THEME =====
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon   = document.getElementById('themeIcon');
+    const htmlEl      = document.documentElement;
+    const nav         = document.getElementById('nav');
+
+    const savedTheme = localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    htmlEl.setAttribute('data-theme', savedTheme);
+    updateIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const next = htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        htmlEl.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateIcon(next);
+    });
+
+    function updateIcon(t) {
+        themeIcon.className = t === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    }
+
+    // ===== NAV SCROLL =====
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.pageYOffset > 50);
+    }, { passive: true });
+
+    // ===== CURSOR GLOW =====
+    const cg = document.getElementById('cursorGlow');
+    let mx = 0, my = 0, cx = 0, cy = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    (function loop() {
+        cx += (mx - cx) * 0.1;
+        cy += (my - cy) * 0.1;
+        cg.style.left = cx + 'px';
+        cg.style.top  = cy + 'px';
+        requestAnimationFrame(loop);
+    })();
+
+    // ===== COUNTDOWN =====
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function updateCountdown() {
+        const now  = new Date();
+        const diff = LAUNCH_DATE - now;
+
+        if (diff <= 0) {
+            document.getElementById('cd-days').textContent  = '00';
+            document.getElementById('cd-hours').textContent = '00';
+            document.getElementById('cd-mins').textContent  = '00';
+            document.getElementById('cd-secs').textContent  = '00';
+            return;
         }
 
-        function saveState(state) {
-            localStorage.setItem('triblyState', JSON.stringify(state));
+        const days  = Math.floor(diff / 86400000);
+        const hours = Math.floor((diff % 86400000) / 3600000);
+        const mins  = Math.floor((diff % 3600000)  / 60000);
+        const secs  = Math.floor((diff % 60000)    / 1000);
+
+        setAndFlip('cd-days',  days);
+        setAndFlip('cd-hours', hours);
+        setAndFlip('cd-mins',  mins);
+        setAndFlip('cd-secs',  secs);
+    }
+
+    function setAndFlip(id, val) {
+        const el     = document.getElementById(id);
+        const newVal = pad(val);
+        if (el.textContent !== newVal) {
+            el.textContent = newVal;
+            el.classList.remove('flip');
+            void el.offsetWidth;
+            el.classList.add('flip');
+            setTimeout(() => el.classList.remove('flip'), 250);
         }
+    }
 
-        let state = loadState();
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 
-        // ===== THEME =====
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon   = document.getElementById('themeIcon');
-        const html = document.documentElement;
-        const nav  = document.getElementById('nav');
+    // ===== PROGRESS BAR =====
+    document.getElementById('progress-pct').textContent = PROGRESS_PERCENT + '%';
+    setTimeout(() => {
+        document.getElementById('progress-fill').style.width = PROGRESS_PERCENT + '%';
+    }, 800);
 
-        const savedTheme = localStorage.getItem('theme') ||
-            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        html.setAttribute('data-theme', savedTheme);
-        updateIcon(savedTheme);
+    // ===== NOTIFY =====
+    if (localStorage.getItem('tribly_notified') === 'true') {
+        document.getElementById('notifyForm').style.display    = 'none';
+        document.getElementById('notifySuccess').style.display = 'flex';
+    }
 
-        themeToggle.addEventListener('click', () => {
-            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            html.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-            updateIcon(next);
-        });
-
-        function updateIcon(t) {
-            themeIcon.className = t === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    function handleNotify() {
+        const email = document.getElementById('notifyEmail').value.trim();
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!re.test(email)) {
+            const inp = document.getElementById('notifyEmail');
+            inp.focus();
+            inp.style.borderColor = '#ef4444';
+            setTimeout(() => inp.style.borderColor = '', 1500);
+            return;
         }
+        document.getElementById('notifyForm').style.display    = 'none';
+        document.getElementById('notifySuccess').style.display = 'flex';
+        localStorage.setItem('tribly_notified', 'true');
+        triggerConfetti();
+    }
 
-        // ===== NAV SCROLL =====
-        window.addEventListener('scroll', () => {
-            nav.classList.toggle('scrolled', window.pageYOffset > 50);
-        }, { passive: true });
+    document.getElementById('notifyBtn').addEventListener('click', handleNotify);
+    document.getElementById('notifyEmail').addEventListener('keydown', e => {
+        if (e.key === 'Enter') handleNotify();
+    });
 
-        // ===== CURSOR GLOW =====
-        const cg = document.getElementById('cursorGlow');
-        let mx = 0, my = 0, cx = 0, cy = 0;
-        document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-        (function loop() {
-            cx += (mx - cx) * 0.1;
-            cy += (my - cy) * 0.1;
-            cg.style.left = cx + 'px';
-            cg.style.top  = cy + 'px';
-            requestAnimationFrame(loop);
-        })();
-
-        // ===== COUNTDOWN =====
-        // Check if target date has passed, if so reset to 30 days from now
-        let TARGET = new Date(state.targetDate);
-        if (TARGET < new Date()) {
-            // Reset countdown if expired
-            TARGET = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
-            state.targetDate = TARGET.toISOString();
-            saveState(state);
-        }
-
-        function pad(n) { return String(n).padStart(2, '0'); }
-
-        function updateCountdown() {
-            const now = new Date();
-            const diff = TARGET - now;
-
-            if (diff <= 0) {
-                // Time's up - reset to 30 days from now
-                TARGET = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
-                state.targetDate = TARGET.toISOString();
-                saveState(state);
-                return;
-            }
-
-            const days  = Math.floor(diff / 86400000);
-            const hours = Math.floor((diff % 86400000) / 3600000);
-            const mins  = Math.floor((diff % 3600000)  / 60000);
-            const secs  = Math.floor((diff % 60000)    / 1000);
-
-            function setAndFlip(id, val) {
-                const el = document.getElementById(id);
-                const newVal = pad(val);
-                if (el.textContent !== newVal) {
-                    el.textContent = newVal;
-                    el.classList.remove('flip');
-                    void el.offsetWidth;
-                    el.classList.add('flip');
-                    setTimeout(() => el.classList.remove('flip'), 250);
+    // ===== STATS ANIMATION =====
+    const stats = document.querySelectorAll('.stat-value[data-target]');
+    const statsObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            const target = +e.target.dataset.target;
+            let cur = 0;
+            const inc = Math.max(target / 50, 1);
+            const t = setInterval(() => {
+                cur += inc;
+                if (cur >= target) {
+                    e.target.textContent = target;
+                    clearInterval(t);
+                } else {
+                    e.target.textContent = Math.floor(cur);
                 }
-            }
-
-            setAndFlip('cd-days',  days);
-            setAndFlip('cd-hours', hours);
-            setAndFlip('cd-mins',  mins);
-            setAndFlip('cd-secs',  secs);
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-
-        // ===== PROGRESS BAR =====
-        document.getElementById('progress-pct').textContent = state.progress + '%';
-        setTimeout(() => {
-            document.getElementById('progress-fill').style.width = state.progress + '%';
-        }, 800);
-
-        // ===== NOTIFY =====
-        if (state.notified) {
-            document.getElementById('notifyForm').style.display = 'none';
-            document.getElementById('notifySuccess').style.display = 'flex';
-        }
-
-        function handleNotify() {
-            const email = document.getElementById('notifyEmail').value.trim();
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!re.test(email)) {
-                document.getElementById('notifyEmail').focus();
-                document.getElementById('notifyEmail').style.borderColor = '#ef4444';
-                setTimeout(() => document.getElementById('notifyEmail').style.borderColor = '', 1500);
-                return;
-            }
-            document.getElementById('notifyForm').style.display    = 'none';
-            document.getElementById('notifySuccess').style.display = 'flex';
-
-            state.notified = true;
-            saveState(state);
-
-            triggerConfetti();
-        }
-
-        document.getElementById('notifyEmail').addEventListener('keydown', e => {
-            if (e.key === 'Enter') handleNotify();
+            }, 30);
+            statsObs.unobserve(e.target);
         });
+    }, { threshold: 0.5 });
+    stats.forEach(s => statsObs.observe(s));
 
-        // ===== STATS =====
-        // Show saved values immediately
-        if (state.statsAnimated) {
-            document.getElementById('stat-members').textContent = state.membersCount;
-            document.getElementById('stat-cities').textContent = state.citiesCount;
-        } else {
-            // Animate on first view
-            const stats = document.querySelectorAll('.stat-value[data-target]');
-            const obs = new IntersectionObserver(entries => {
-                entries.forEach(e => {
-                    if (!e.isIntersecting) return;
+    // ===== CONFETTI =====
+    const canvas = document.getElementById('confetti-canvas');
+    const ctx    = canvas.getContext('2d');
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-                    const target = +e.target.dataset.target;
-                    const id = e.target.id;
-                    let cur = 0;
-                    const inc = target / 50;
-                    const t = setInterval(() => {
-                        cur += inc;
-                        if (cur >= target) {
-                            e.target.textContent = target;
-                            clearInterval(t);
+    let confetti = [];
+    const colors = ['#00B248','#C6F135','#00d4aa','#ffffff','#ffdd00'];
 
-                            // Save final values
-                            if (id === 'stat-members') state.membersCount = target;
-                            if (id === 'stat-cities') state.citiesCount = target;
-                            state.statsAnimated = true;
-                            saveState(state);
-                        }
-                        else e.target.textContent = Math.floor(cur);
-                    }, 30);
-                    obs.unobserve(e.target);
-                });
-            }, { threshold: 0.5 });
-            stats.forEach(s => obs.observe(s));
+    function mkConfetti() {
+        return {
+            x: Math.random() * canvas.width,
+            y: -10,
+            size: Math.random() * 8 + 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            sy: Math.random() * 3 + 2,
+            sx: Math.random() * 2 - 1,
+            rot: Math.random() * 360,
+            rs: Math.random() * 4 - 2
+        };
+    }
+
+    function animateConfetti() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = confetti.length - 1; i >= 0; i--) {
+            const p = confetti[i];
+            p.y += p.sy;
+            p.x += p.sx;
+            p.rot += p.rs;
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate(p.rot * Math.PI / 180);
+            ctx.fillStyle = p.color;
+            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+            ctx.restore();
+            if (p.y > canvas.height) confetti.splice(i, 1);
         }
+        if (confetti.length > 0) requestAnimationFrame(animateConfetti);
+    }
 
-        // ===== CONFETTI =====
-        const canvas = document.getElementById('confetti-canvas');
-        const ctx    = canvas.getContext('2d');
+    function triggerConfetti() {
+        for (let i = 0; i < 120; i++) confetti.push(mkConfetti());
+        animateConfetti();
+    }
+
+    document.getElementById('contactBtn').addEventListener('click', () => triggerConfetti());
+
+    window.addEventListener('resize', () => {
         canvas.width  = window.innerWidth;
         canvas.height = window.innerHeight;
+    });
 
-        let confetti = [];
-        const colors = ['#00B248','#C6F135','#00d4aa','#ffffff','#ffdd00'];
-
-        function mkConfetti() {
-            return {
-                x: Math.random() * canvas.width,
-                y: -10,
-                size: Math.random() * 8 + 4,
-                color: colors[Math.floor(Math.random() * colors.length)],
-                sy: Math.random() * 3 + 2,
-                sx: Math.random() * 2 - 1,
-                rot: Math.random() * 360,
-                rs: Math.random() * 4 - 2
-            };
-        }
-
-        function animateConfetti() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            confetti.forEach((p, i) => {
-                p.y += p.sy; p.x += p.sx; p.rot += p.rs;
-                ctx.save();
-                ctx.translate(p.x, p.y);
-                ctx.rotate(p.rot * Math.PI / 180);
-                ctx.fillStyle = p.color;
-                ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
-                ctx.restore();
-                if (p.y > canvas.height) confetti.splice(i, 1);
-            });
-            if (confetti.length > 0) requestAnimationFrame(animateConfetti);
-        }
-
-        function triggerConfetti() {
-            for (let i = 0; i < 120; i++) confetti.push(mkConfetti());
-            animateConfetti();
-        }
-
-        document.getElementById('contactBtn').addEventListener('click', () => triggerConfetti());
-
-        window.addEventListener('resize', () => {
-            canvas.width  = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-
-        // Parallax grid
-        window.addEventListener('scroll', () => {
-            const grid = document.querySelector('.hero-grid');
-            if (grid) grid.style.transform = `translateY(${window.pageYOffset * 0.5}px)`;
-        }, { passive: true });
-    </script>
+    window.addEventListener('scroll', () => {
+        const grid = document.querySelector('.hero-grid');
+        if (grid) grid.style.transform = `translateY(${window.pageYOffset * 0.5}px)`;
+    }, { passive: true });
+</script>
 </body>
 </html>
