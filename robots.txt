@@ -9,6 +9,8 @@ Crawl-delay: 1
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
+# مسار ملف توثيق Bing
+Allow: /BingSiteAuth.xml
 
 User-agent: Baiduspider
 Allow: /
